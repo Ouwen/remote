@@ -1,11 +1,14 @@
 # Leggett & Platt Cloud Connected Remote
 
-This device is a cloud connected via [conduit v1](https://github.com/suyashkumar/conduit) and ESP8266 remote control which automatically raises the head lift of the bed at the set alarm time.
+Have you ever wanted the luxury of being forced out of bed at a certain time automatically? I certainly did.
 
-The exact remote used is pictured here: ![alt text][logo]
-[remote_picture]: https://github.com/ouwen/remote/blob/master/documentation/remote.jpg "remote picture"
+This device is a cloud connected (via [conduit v1](https://github.com/suyashkumar/conduit)) ESP8266 chip which automatically raises the head of your Leggett & Platt bed at the set alarm time allowing the user to feel very uncomfortable.
+
+The exact remote used is pictured [here](https://github.com/ouwen/remote/blob/master/documentation/remote.jpg): 
 
 ### Hardware
+![alt text](https://github.com/ouwen/remote/blob/master/documentation/remote_click.gif "yes this is jank")
+
 Two servo mounts can be found in `./hardware` as a `.stl` file. These can be 3d printed.
 One is pressfit, the other must be glued or screwed onto a board.
 
@@ -15,9 +18,17 @@ The servos used are SG90 microservos and can be bought [here](https://www.amazon
 
 ### Firmware
 Rename `info.sample.h` to `info.h` and fill out the relevant constants.
+Run the following commands after connecting your ESP8266 microcontroller
+
+```
+  git clone https://github.com/Ouwen/remote.git
+  cd firmware
+  pio run
+  pio run --target="upload"
+```
 
 ### Software
-TODO
+ - TODO
 
 ### License 
 Copyright (c) 2018 Ouwen Huang

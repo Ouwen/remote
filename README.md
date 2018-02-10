@@ -27,8 +27,21 @@ Run the following commands after connecting your ESP8266 microcontroller
   pio run --target="upload"
 ```
 
-### Software
+### Software Server
+Run the following commands to get a docker container running the server.
+
+```
+  cd software
+  docker build . -t remote_cron_server
+  docker run -it -p 5000:5000 \
+    -e EMAIL='my_conduit_email' \
+    -e PASSWORD='my_conduit_password' \
+    -e SERVER='https://my_conduit_server.com' remote_cron_server
+```
+
+### React Native App
  - TODO
+
 
 ### License 
 Copyright (c) 2018 Ouwen Huang
